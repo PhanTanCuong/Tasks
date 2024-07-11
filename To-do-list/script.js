@@ -14,7 +14,7 @@ function addTask(){
         li.innerHTML=inputBox.value;
         listContainer.appendChild(li);
         let span =document.createElement("span");
-        span.innerHTML='<img src="images/checked.png">';
+        span.innerHTML='<img src="images/delete.png">';
         li.appendChild(span);
     }
     // Clear the input box after adding the task
