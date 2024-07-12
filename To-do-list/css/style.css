@@ -89,11 +89,12 @@ ul li::before {
     left: 0;
 }
 
-ul li.checked{
+ul li.checked {
     color: #555;
     text-decoration: line-through;
 }
-ul li.checked::before{
+
+ul li.checked::before {
     background-image: url(../images/check.png);
 }
 
@@ -102,12 +103,13 @@ ul li span {
     right: 0;
 }
 
-ul li span img{
+ul li span img {
     width: 1.5rem;
     height: auto;
 }
 
-ul li span img:hover{
+ul li span img:hover {
     width: 1.5rem;
     height: auto;
     opacity: 0.5;
+}
