@@ -32,7 +32,7 @@ body {
 .quiz h2{
     font-size: 18px;
     color: #001e4d;
-    font-weight: 600;
+    font-weight: 600;                                                                       
 }
 
 .btn{
@@ -48,11 +48,15 @@ body {
     cursor: pointer;
     transition: all 0.3s;
 }
-
-.btn:hover{
+/* Can not hover after user selected the answer button */
+.btn:hover:not([disabled]){
     background: #222;
     color: #fff;
 }
+/* 
+.btn:disabled{
+    cursor: no-drop;
+} */
 
 #next-btn{
     background: #001e4d;
@@ -64,5 +68,15 @@ body {
     margin:20px auto 0;
     border-radius: 4px;
     cursor: pointer;
-    display: block;
+    display: block; 
+    /* Thuộc tính display:block có thể set phần tử ra giữa  */
+}
+
+/* Correct & Incorrect classes */
+.correct{
+    background-color: #9aeabc;
+}
+
+.incorrect{
+    background-color: #ff9393;
 }
