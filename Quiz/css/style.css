@@ -53,10 +53,10 @@ body {
     background: #222;
     color: #fff;
 }
-/* 
+
 .btn:disabled{
     cursor: no-drop;
-} */
+}
 
 #next-btn{
     background: #001e4d;
@@ -79,4 +79,17 @@ body {
 
 .incorrect{
     background-color: #ff9393;
+}
+
+/* Responsive  */
+@media only screen and (max-width:1200px){
+    .quiz h2{
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width:712px){
+    .quiz h2{
+        text-align: justify;
+    }
 }
