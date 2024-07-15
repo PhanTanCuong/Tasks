@@ -1,6 +1,7 @@
 const questions = [
     {
         questions:"Which date is Cuong's Bithday?",
+        image:"images/question_img.png",
         answers:[
             {text:"31/07",correct:true},
             {text:"31/01",correct:false},
@@ -10,6 +11,7 @@ const questions = [
     },
     {
         questions:"Which date is Cuong's Bithday?",
+        image:null,
         answers:[
             {text:"31/07",correct:true},
             {text:"31/01",correct:false},
@@ -19,6 +21,7 @@ const questions = [
     },
     {
         questions:"I’m going on holiday on Saturday.This time next week I……on a beach in the sea.",
+        image:null,
         answers:[
             {text:"should be lying",correct:false},
             {text:"will lie",correct:false},
@@ -31,6 +34,7 @@ const questions = [
 const questionElement =document.getElementById("question");
 const answerButton =document.getElementById("answer-buttons");
 const  nextButton=document.getElementById("next-btn");
+const questionImage=document.getElementById("question-image");
 
 let currentQuestionIndex=0;
 let score=0;
@@ -51,6 +55,15 @@ function showQuestion(){
     let currentQuestion = questions[currentQuestionIndex];
     let questionNo= currentQuestionIndex + 1; //The current question number
     questionElement.innerHTML=questionNo + ". " + currentQuestion.questions;//Display the question
+
+    //Display question image 
+    if (currentQuestion.image) {
+        questionImage.src = currentQuestion.image;
+        questionImage.style.display = "block";
+    } else {
+        questionImage.style.display = "none";
+    }
+
     //Display the answers for each question
     currentQuestion.answers.forEach(answer=>{
         const button =document.createElement("button");
